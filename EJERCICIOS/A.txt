@@ -1,0 +1,64 @@
+A. Advanced tic-tac-toe
+time limit per test1 second
+memory limit per test1024 megabytes
+Tic-tac-toe is a two-player game played on an initially empty 3×3
+ board, where players take turns alternately. The first player plays with the letter X, and the second with the letter O. On their turn, each player must choose an empty cell on the board and write their letter in it. The first player to form a vertical, horizontal, or diagonal line with three occurrences of their letter is the winner. If there are no empty cells left on the board where a move can be made, the result is considered a draw. The images below show some examples of possible final results in a game of tic-tac-toe.
+
+
+Xavier and Olivia were fans of tic-tac-toe, but after a while, both learned to play optimally, and now the game has become boring because every time they play, the result is a draw. However, they came up with a new variant of the game, where N
+ restrictions are added before starting, which must be followed throughout the game.
+
+Each cell on the board is assigned a number from 1 to 9, as shown in the image below, and then each restriction is defined by two integers A
+ and B
+, indicating that cell B
+ on the board cannot be used by either player if cell A
+ is empty.
+
+1	2	3
+4	5	6
+7	8	9
+Given N
+ restrictions, if Xavier plays first and both players play optimally, determine who will be the winner or if the result will be a draw.
+
+Input
+A line with an integer N
+ (0≤N≤105)
+, the number of restrictions.
+
+Then N
+ lines, where the i
+-th of them contains two integers Ai
+ and Bi
+ (1≤Ai,Bi≤9)
+, which describe the i
+-th restriction of the game.
+
+Output
+A line with a letter indicating the result of the game:
+
+"X" to indicate that Xavier wins
+"O" to indicate that Olivia wins
+"E" to indicate a draw (E comes from "Empate", which means draw in spanish)
+Examples
+InputCopy
+0
+OutputCopy
+E
+InputCopy
+1
+9 5
+OutputCopy
+X
+InputCopy
+7
+2 2
+1 7
+3 8
+5 9
+4 6
+6 4
+4 6
+OutputCopy
+O
+Note
+In the third example, if both players play optimally, the final result will be as shown in the third image of the statement ("O wins").
