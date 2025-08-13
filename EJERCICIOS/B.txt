@@ -1,0 +1,81 @@
+B. Period Search
+time limit per test1 second
+memory limit per test1024 megabytes
+Adela and Bastian are fans of riddles, and they recently came up with a new game, but they need your help to play it.
+
+In this game, Adela first chooses a secret word s=s1s2…sN
+ of length N
+, formed by N
+ lowercase letters of the English alphabet s1,s2,…,sN
+. Bastian knows the length N
+ of the secret word, but not the word itself.
+
+To win the game, Bastian must determine whether the word chosen by Adela is periodic or not. To do this, Bastian can choose two integers L
+ and R
+, and ask the following question: Is t=sLsL+1…sR
+ a period of s
+? Adela will always answer each question truthfully.
+
+Adela and Bastian consider that t
+ is a period of a word s
+ if and only if s
+ can be obtained by concatenating c≥2
+ copies of t
+.
+
+A word s
+ is periodic if t
+ is a period of s
+ for some t
+. For example: ab is the only period of abab, and both a and aa are periods of aaaa, while on the other hand ab and ababa are not periodic.
+
+To make the game fun, Adela must set a limit on the number of questions that Bastian can ask. This limit must depend on the initial information that Bastian receives: the value of N
+. In particular, she wants the limit on questions K
+ to be the minimum possible, but in such a way that Bastian can win the game if he asks the K
+ questions optimally, having absolute certainty of always being able to find the correct answer, regardless of which word of length N
+ Adela chooses.
+
+Help them to play their game by writing a program that, given the value of N
+, finds the limit on questions K
+ that they should use. Additionally, so that Bastian does not think that Adela cheated in case he loses, the program must indicate a set of K
+ questions with which Bastian could win.
+
+Input
+A line with an integer N
+ (2≤N≤106)
+, the length of the word s
+ chosen by Adela.
+
+Output
+A line with the integer K
+, indicating the limit of questions they should use. Then K
+ lines indicating a set of questions with which Bastian could win. The i
+-th line describes the i
+-th question using the integers L
+ and R
+ (1≤L≤R≤N)
+, as explained above.
+
+If there are multiple sets of optimal questions, any of them will be accepted.
+
+Examples
+InputCopy
+4
+OutputCopy
+1
+1 2
+InputCopy
+6
+OutputCopy
+2
+3 4
+4 6
+Note
+A word of length 4
+, s=s1s2s3s4
+, is periodic if and only if t=s1s2
+ is a period of s
+. Therefore, in the first example, one question is sufficient to determine with certainty whether s
+ is a periodic word or not.
+
+
